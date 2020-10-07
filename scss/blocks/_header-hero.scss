@@ -23,7 +23,8 @@
   position: relative;
   z-index: 1;
   display: flex;
-  align-items: flex-end;
+  flex-wrap: wrap;
+  justify-content: space-between;
   padding-top: 140px;
   padding-bottom: 255px;
 
@@ -44,9 +45,7 @@
 .header__hero-title {
   position: relative;
   z-index: 1;
-  width: 635px;
   margin-right: 30px;
-  min-height: 200px;
 
   h1 {
     margin: 0;
@@ -67,11 +66,11 @@
   position: relative;
   z-index: 1;
   max-width: 445px;
-  min-height: 200px;
   text-align: left;
 
   p {
-    margin-bottom: 0;
+    width: 100%;
+    margin: 0;
     color: #fff;
     font-size: 18px;
     line-height: 28px;
@@ -85,5 +84,74 @@
     width: 50px;
     height: 4px;
     background-color: #79C8C7;
+  }
+}
+
+@include breakpoint-down (1360px) {
+  .header__hero::before {
+    top: 30%;
+  }
+
+  .header__hero-wrapper {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .header__hero-title {
+    margin-bottom: 24px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .header__hero-text {
+    max-width: 670px;
+    align-items: flex-start;
+    text-align: center;
+
+    &::before {
+      display: none;
+    }
+  }
+}
+
+@include breakpoint-down (950px) {
+  .header__hero {
+
+    &::before {
+      display: none;
+    }
+  }
+
+  .header__hero-wrapper {
+
+    &::after {
+      left: 50%;
+      bottom: 0;
+      transform: translateX(-50%);
+    }
+  }
+}
+
+@include breakpoint-down (780px) {
+  .header__hero-title {
+    
+    h1 {
+      font-size: 64px;
+      line-height: 56px;
+    }
+  }
+
+  .header__hero-text {
+    max-width: 500px;
+  }
+}
+
+@include breakpoint-down (580px) {
+  .header__hero-title {
+
+    h1 {
+      font-size: 50px;
+    }
   }
 }
