@@ -92,3 +92,33 @@
     transform: translate(-50%, -60%);
   }
 }
+
+@include breakpoint-down (900px) {
+  .delivery__list {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+  .delivery__item + .delivery__item {
+    margin-top: 80px;
+  }
+
+  .delivery__item {
+    max-width: 100%;
+  }
+}
+
+@include breakpoint-down (780px) {
+  .delivery__title {
+    font-size: 36px;
+    line-height: 36px;
+  }
+}
+
+@include breakpoint-down (580px) {
+  .delivery__title {
+    font-size: 32px;
+    line-height: 32px;
+  }
+}

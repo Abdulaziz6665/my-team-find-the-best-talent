@@ -37,4 +37,33 @@
     color: #fff;
     background-color: #012f34;
   }
-}  
+}
+
+@include breakpoint-down (1200px) {
+  .get-started {
+    background-position: left bottom -20px;
+  }
+  .get-started__wrapper {
+    padding-top: 84px;
+    padding-bottom: 84px;
+  }
+}
+
+@include breakpoint-down (900px) {
+  .get-started__wrapper {
+    justify-content: space-between;
+  }
+}
+
+@include breakpoint-down (780px) {
+  .get-started__wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .get-started__title {
+    margin-bottom: 24px;
+  }
+}

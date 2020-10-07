@@ -20,6 +20,7 @@
   z-index: 1; 
   width: 100%;
   max-width: 445px;
+  margin-right: 120px;
 
   h2 {
     margin-top: 54px;
@@ -73,6 +74,7 @@
     z-index: 1;
     top: 0;
     left: 0;
+    display: inline-flex;
     width: 72px;
     height: 72px;
     background-repeat: no-repeat;
@@ -92,4 +94,64 @@
 
 .icon-chart::before {
   background-image: url("../img/icon-chart.svg");
+}
+
+@include breakpoint-down (950px) {
+  .block-build {
+    background-position: top right -100px;
+  }
+}
+
+@include breakpoint-down (860px) {
+  .block-build__wrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .block-build__title {
+    max-width: 615px;
+    margin: 0;
+    text-align: left;
+  }
+}
+
+@include breakpoint-down (780px) {
+  .block-build__title {
+
+    h2 {
+      font-size: 35px;
+      line-height: 35px;
+    }
+  }
+}
+
+@include breakpoint-down (650px) {
+  .block-build__text-content {
+    max-width: 100%;
+  }
+  .block-build__text-content-item {
+    text-align: center;
+
+    &::before {
+      position: static;
+      transform: translateX(5%);
+    }
+  }
+}
+
+@include breakpoint-down (580px) {
+  .block-build__wrapper {
+    padding-top: 70px;
+    padding-bottom: 70px;
+    align-items: flex-start;
+  }
+
+  .block-build__title {
+    max-width: 80%;
+
+    h2 {
+      font-size: 32px;
+      line-height: 32px;
+    }
+  }
 }

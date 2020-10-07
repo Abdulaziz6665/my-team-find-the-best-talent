@@ -6,7 +6,7 @@
   margin-right: auto;
 }
 
-@include breakpoint-down (1100px) {
+@include breakpoint-down (1200px) {
   .container {
     padding-left: 40px;
     padding-right: 40px;

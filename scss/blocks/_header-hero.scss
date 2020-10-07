@@ -148,6 +148,11 @@
 }
 
 @include breakpoint-down (580px) {
+  .header__hero-wrapper {
+    padding-top: 80px;
+    padding-bottom: 180px;
+  }
+
   .header__hero-title {
 
     h1 {
