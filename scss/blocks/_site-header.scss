@@ -20,6 +20,12 @@
   display: block;
 }
 
+.site-header__open-menu {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
 .site-header__link-wrapper {
   padding-left: 80px;
   margin-right: auto;
@@ -43,6 +49,7 @@
 }
 
 .site-header__contact-us {
+  margin-left: auto;
   padding: 10px 33px;
   border: 2px solid #fff;
   border-radius: 24px;
@@ -91,12 +98,43 @@
     height: 32px;
   }
 
-  .site-header__link-wrapper,
-  .site-header__contact-us {
+  .site-header__open-menu {
     display: none;
   }
 
+  .open {
+    position: fixed;
+    z-index: 5;
+    top: 0;
+    padding-top: 48px;
+    right: 0;
+    width: 70%;
+    display: block;
+    height: 100vh;
+    background-color: #2C6269;
+    text-align: center;
+  }
+
+  .site-header__link-wrapper {
+    display: flex;  
+    flex-direction: column;
+    padding-top: 40px;
+    padding-bottom: 36px;
+    padding-left: 0;
+  }
+
+  .site-header__link {
+    margin: 0;
+  }
+
+  .site-header__link + .site-header__link {
+    margin: 0;
+    margin-top: 24px;
+  }
+
   .btn {
+    position: relative;
+    z-index: 5;
     display: block;
     background: none;
     border: none;
